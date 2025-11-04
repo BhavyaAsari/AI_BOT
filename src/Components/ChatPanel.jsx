@@ -1,6 +1,7 @@
 import { Send } from "lucide-react";
+import { Paperclip } from "lucide-react";
 
-function ChatPanel({ darkMode, input, setInput, loading, handleSendMessage }) {
+function ChatPanel({ darkMode, input, setInput, loading, handleSendMessage,handleFileUpload }) {
 
     return (
 
@@ -40,6 +41,22 @@ function ChatPanel({ darkMode, input, setInput, loading, handleSendMessage }) {
                         rounded-full px-5 py-3
                         focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent`}
                     />
+
+                        {/* Hidden File Input */}
+                        <input
+                            type="file"
+                            id="fileInput"
+                            accept=".txt,.pdf,.json,.csv,.md"
+                            onChange={handleFileUpload}
+                            className="hidden"
+                        />
+
+                        {/* Paperclip Button */}
+                        <label htmlFor="fileInput"
+                            className={`p-2 rounded-full  hover:bg-gray-200 dark:hover:bg-gray-700 cursor-pointer transition ${darkMode ? "text-white":"text-black"}`}>
+                            <Paperclip size={22} />
+                            </label>
+
 
                     {/* Send button */}
                     <button

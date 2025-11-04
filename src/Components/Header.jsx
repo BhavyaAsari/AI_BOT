@@ -17,7 +17,7 @@ function Header({darkMode,toggleDarkMode}) {
                     <div className="p-2 bg-gradient-to-r from bg-purple-500 to indigo-600 rounded-full border border-black">
                         <Bot className="h-6 w-6 text-white"/>
                     </div>
-                    <h1 className={`text-2xl`}><strong>Intelligent Chat</strong></h1>
+                    <h1 className={`text-2xl`}><strong><em>Vynx</em></strong></h1>
                 </div>
                 {/* Right Side Content */}
                 <div className="flex items-center space-x-6">
